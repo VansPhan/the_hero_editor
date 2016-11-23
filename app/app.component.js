@@ -31,11 +31,10 @@ var AppComponent = (function () {
     function AppComponent() {
         this.title = 'Tour of Heroes';
         this.heroes = HEROES;
-        this.hero = {
-            id: 1,
-            name: 'Windstorm'
-        };
     }
+    AppComponent.prototype.onSelect = function (hero) {
+        this.selectedHero = hero;
+    };
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
